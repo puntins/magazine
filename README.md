@@ -1,0 +1,2 @@
+# magazine
+mobile magazine
