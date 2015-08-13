@@ -1,3 +1,5 @@
+/****** Smart phone styles ******/
+
 body {
   background-color: #fff;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -7,12 +9,8 @@ body {
 .magazine {
   position: fixed;
   width: 100vw;
-  max-height: 64px;
-  color: #fff;
-  text-shadow: 0.3em 0.3em 0em #013358;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 3.5vw;
-  text-align: center;
+  height: 64px;
+  font-size: 3.5vmin;
   background-image: url("../img/electronic_header.jpg");
   border-bottom:solid #013358 4px;
   padding-top: .5rem;
@@ -21,13 +19,22 @@ body {
   white-space: nowrap;
 }
 
+.magazine h1 {
+  color: #fff;
+  text-shadow: 0.1em 0.1em 0em #013358;
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+}
+
 .svgLogo {
-  display: block;
-  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+header svg {
   width: 100px;
-  height: 129px;
+  height: 100px;
   padding-top: 5rem;
-  margin-bottom: -2rem;
 }
 
 .topNav {
@@ -73,6 +80,7 @@ h2 {
 article img {
   float: left;
   margin: 1rem;
+  border-radius: .5rem;
   box-shadow: .2em .2em 1em #888888;
 }
 
@@ -101,6 +109,7 @@ article a {
   padding: .4rem;
   margin: 0.5rem 7.5rem 0.5rem 7.5rem;
   text-decoration: none;
+  border-radius: .5rem;
 }
 
 article a:hover {
@@ -119,4 +128,127 @@ footer {
   padding: .1rem;
   margin-top: 1rem;
   text-shadow: 0.1em 0.1em 0em #013358;
+}
+
+/****** Responsive web ******/
+
+@media screen and (min-width: 700px) {
+
+  .svgLogo {
+    position: fixed;
+    top:1rem;
+    left: 3rem;
+    float:left;
+    background: #087aae;
+    padding: 2px;
+    z-index: 3;
+    border-radius: 1rem;
+    border-bottom:solid #013358 4px;
+    border-right:solid #013358 4px;
+    border-top:solid #2fbbdd 4px;
+    border-left:solid #2fbbdd 4px;
+  }
+
+  header svg {
+    width: 200px;
+    height: 200px;
+    padding-top: 0;
+  }
+
+  .svgLogo .bodyFill {
+    fill: #a1adb9;
+  }
+
+  .magazine {
+    position: sticky;
+    height: 128px;
+    font-size: 2rem;
+    background-position: center;
+    background-size: cover;
+    border-top: solid #fff 2.8rem;
+    border-bottom:solid #fff 3rem;
+    z-index: 2;
+  }
+
+  .magazine h1 {
+    float: right;
+    margin-top: 2rem;
+    margin-right: 8rem;
+  }
+
+  .content {
+    display: flex;
+    flex-flow: column;
+    padding-top: 15rem;
+  }
+
+  .content:before {
+    display: flex;
+    content: " ";
+    margin-top: -15rem;
+    height: 15rem;
+    visibility: hidden;
+  }
+
+  article {
+    margin: 0 1rem 0 19.5rem;
+  }
+
+  article:before {
+    /*margin-top: -15rem;
+    height: 15rem;*/
+    display: none;
+  }
+
+  .topNav {
+    position: fixed;
+    margin-left: auto;
+    width: 250px;
+    height: 100vh;
+    margin-top: 15rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    border-radius: 1rem;
+    text-align: left;
+    white-space: nowrap;
+    border-right:solid #013358 4px;
+    border-top:solid #2fbbdd 4px;
+    border-left:solid #2fbbdd 4px;
+  }
+
+  .topNav ul {
+    margin: 1rem 1rem;
+    height: 12rem;
+    overflow-y: auto;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin: auto;
+  }
+
+  .image {
+    max-width:40%;
+    float: left;
+  }
+
+  article:nth-of-type(odd) .image {
+    float: right;
+  }
+
+  #article1 img {content: url("../img/whiterobot1_med.jpg");}
+  #article2 img {content: url("../img/boxrobot_med.jpg");}
+  #article3 img {content: url("../img/monkeybot_med.jpg");}
+  #article4 img {content: url("../img/FriendlyRobots_med.jpg");}
+  #article5 img {content: url("../img/domoroboto_med.jpg");}
+  #article6 img {content: url("../img/eyebot_med.jpg");}
+  #article7 img {content: url("../img/fingerrobot_med.jpg");}
+  #article8 img {content: url("../img/oldrobot_med.jpg");}
+  #article9 img {content: url("../img/bouncebot_med.jpg");}
+  #article10 img {content: url("../img/robotndog_med.jpg");}
+
+  article a {
+    display: none;
+  }
+
 }
