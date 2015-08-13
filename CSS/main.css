@@ -6,12 +6,21 @@ body {
   margin: 0;
 }
 
+.magazineEmpty {
+  position: fixed;
+  width: 100vw;
+  height: 64px;
+  background-image: url("../img/electronic_header.jpg");
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  top: 0;
+}
+
 .magazine {
   position: fixed;
   width: 100vw;
   height: 64px;
-  font-size: 3.5vmin;
-  background-image: url("../img/electronic_header.jpg");
+  font-size: 1.8vmax;
   border-bottom:solid #013358 4px;
   padding-top: .5rem;
   padding-bottom: .5rem;
@@ -159,45 +168,37 @@ footer {
     fill: #a1adb9;
   }
 
-  .magazine {
+  .magazineEmpty {
     position: sticky;
     height: 128px;
-    font-size: 2rem;
+    font-size: 2.5vmax;
     background-position: center;
     background-size: cover;
     border-top: solid #fff 2.8rem;
     border-bottom:solid #fff 3rem;
-    z-index: 2;
+    z-index: 1;
+  }
+
+  .magazine {
+    position: sticky;
+    height: 128px;
+    font-size: 2.5vmax;
+    background-position: center;
+    padding-top: 3rem;
+    border-bottom: none;
+    z-index: 4;
   }
 
   .magazine h1 {
-    float: right;
-    margin-top: 2rem;
+    display: block;
+    float: left;
+    margin-top: 1.2rem;
     margin-right: 8rem;
-  }
-
-  .content {
-    display: flex;
-    flex-flow: column;
-    padding-top: 15rem;
-  }
-
-  .content:before {
-    display: flex;
-    content: " ";
-    margin-top: -15rem;
-    height: 15rem;
-    visibility: hidden;
-  }
-
-  article {
-    margin: 0 1rem 0 19.5rem;
-  }
-
-  article:before {
-    /*margin-top: -15rem;
-    height: 15rem;*/
-    display: none;
+    margin-left: 15rem;
+    padding: 1rem;
+    background: rgba(154, 211, 230, 0.6);
+    box-shadow: 0 0 1em rgba(154, 211, 230, 0.6);
+    border-radius: 1rem;
   }
 
   .topNav {
@@ -220,6 +221,30 @@ footer {
     margin: 1rem 1rem;
     height: 12rem;
     overflow-y: auto;
+  }
+
+  .content {
+    display: flex;
+    flex-flow: column;
+    padding-top: 15rem;
+  }
+
+  /*.content:before {
+    display: block;
+    content: " ";
+    margin-top: -15rem;
+    height: 15rem;
+    visibility: hidden;
+  }*/
+
+  article {
+    margin: 0 1rem 0 19.5rem;
+  }
+
+  article:before {
+    /*margin-top: -15rem;
+    height: 15rem;*/
+    display: none;
   }
 
   h2 {
