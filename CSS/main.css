@@ -14,6 +14,7 @@ body {
   padding-top: .5rem;
   padding-bottom: .5rem;
   top: 0;
+  z-index: 2;
 }
 
 .magazine {
@@ -25,6 +26,7 @@ body {
   padding-bottom: .5rem;
   top: 0;
   white-space: nowrap;
+  z-index: 3;
 }
 
 .magazine h1 {
@@ -33,6 +35,7 @@ body {
   text-shadow: 0.1em 0.1em 0em #013358;
   font-family: 'Press Start 2P', cursive;
   text-align: center;
+  z-index: 4;
 }
 
 .svgLogo {
@@ -44,6 +47,7 @@ header svg {
   width: 6.25rem;
   height: 6.25rem;
   padding-top: 5rem;
+  z-index: 1;
 }
 
 .topNav {
