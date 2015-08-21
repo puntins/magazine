@@ -1,7 +1,7 @@
 /****** Smart phone styles ******/
 
 body {
-  background-color: #fff;
+  background: #fff;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin: 0;
 }
@@ -9,7 +9,7 @@ body {
 .magazineEmpty {
   position: fixed;
   width: 100vw;
-  height: 64px;
+  height: 4rem;
   background-image: url("../img/electronic_header.jpg");
   padding-top: .5rem;
   padding-bottom: .5rem;
@@ -19,9 +19,8 @@ body {
 .magazine {
   position: fixed;
   width: 100vw;
-  height: 64px;
-  font-size: 1.8vmax;
-  border-bottom:solid #013358 4px;
+  height: 4rem;
+  border-bottom: solid #013358 0.25rem;
   padding-top: .5rem;
   padding-bottom: .5rem;
   top: 0;
@@ -29,6 +28,7 @@ body {
 }
 
 .magazine h1 {
+  font-size: 4vmax;
   color: #fff;
   text-shadow: 0.1em 0.1em 0em #013358;
   font-family: 'Press Start 2P', cursive;
@@ -41,29 +41,40 @@ body {
 }
 
 header svg {
-  width: 100px;
-  height: 100px;
+  width: 6.25rem;
+  height: 6.25rem;
   padding-top: 5rem;
 }
 
 .topNav {
-  text-align: center;
+  /* here is the hamburger code */
+  position: fixed;
+  width: 12rem;
+  text-align: left;
+  white-space: nowrap;
+  margin-right: auto;
+  /* the hamburger code ends */
+
+  /*text-align: center;*/
   font-weight: bold;
-  padding:10px;
+  padding: 0.625rem;
   background-image: url("../img/electronic_header.jpg");
   background-size: cover;
-  background-position: center;
-  border-top:solid #013358 4px;
-  border-bottom:solid #013358 4px;
+  /*background-position: center;*/
+  border-top: solid #2fbbdd 0.25rem;
+  border-bottom: solid #013358 0.25rem;
+  border-right: solid #013358 0.25rem;
+  z-index: 0;
 }
 
 .topNav a {
   text-decoration: none;
-  text-shadow: 2px 2px 0px #013358;
+  text-shadow: 0.125rem 0.125rem 0rem #013358;
 }
 
 .topNav ul {
-  margin: 0 2rem;
+  margin: 0rem;
+  /*margin: 0 2rem;*/
   padding: 0;
 }
 
@@ -71,7 +82,8 @@ header svg {
   display: block;
   font-size: 1.25rem;
   letter-spacing: 0.0700em;
-  padding: .2rem 1rem .2rem 1rem;
+  /* left changed from 1 */
+  padding: .2rem 1rem .2rem 0rem;
 }
 
 .topNav a {
@@ -80,6 +92,21 @@ header svg {
 
 .topNav a:hover {
   color: #ea6af5;
+}
+
+.content {
+  position: relative;
+  background: #fff;
+  left: 0;
+  -webkit-transition: all .7s ease;
+  -moz-transition: all .7s ease;
+  -ms-transition: all .7s ease;
+  -o-transition: all .7s ease;
+  transition: all .7s ease;
+}
+
+.content.off {
+  left: 14rem;
 }
 
 h2 {
@@ -103,7 +130,7 @@ article:before {
 
 article {
   margin: 0 1rem 0 1rem;
-  border-bottom:solid #013358 4px;
+  border-bottom:solid #013358 0.25rem;
 }
 
 article a {
@@ -111,10 +138,10 @@ article a {
   text-align: center;
   color: #fff;
   background: #087aae;
-  border-bottom:solid #013358 4px;
-  border-right:solid #013358 4px;
-  border-top:solid #2fbbdd 4px;
-  border-left:solid #2fbbdd 4px;
+  border-bottom:solid #013358 0.25rem;
+  border-right:solid #013358 0.25rem;
+  border-top:solid #2fbbdd 0.25rem;
+  border-left:solid #2fbbdd 0.25rem;
   padding: .4rem;
   margin: 0.5rem 7.5rem 0.5rem 7.5rem;
   text-decoration: none;
@@ -124,19 +151,41 @@ article a {
 article a:hover {
   color: #ea6af5;
   background: #087aae;
-  border-bottom:solid #2fbbdd 4px;
-  border-right:solid #2fbbdd 4px;
-  border-top:solid #013358 4px;
-  border-left:solid #013358 4px;
+  border-bottom:solid #2fbbdd 0.25rem;
+  border-right:solid #2fbbdd 0.25rem;
+  border-top:solid #013358 0.25rem;
+  border-left:solid #013358 0.25rem;
 }
 
 footer {
   color: #fff;
   text-align: center;
   background: #087aae;
+  border-top: solid #2fbbdd 0.25rem;
+  border-bottom:solid #013358 0.25rem;
   padding: .1rem;
   margin-top: 1rem;
+  margin-bottom: 3.53rem;
   text-shadow: 0.1em 0.1em 0em #013358;
+}
+
+.hamburger {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 3.25rem;
+  background: #087aae;
+  border-top: solid #2fbbdd .25rem;
+  text-align: left;
+  z-index: 2;
+}
+
+.button {
+  width: 3rem;
+  height: 3rem;
+  margin-top: .5rem;
+  margin-left: .5rem;
 }
 
 /****** Responsive web ******/
@@ -149,7 +198,7 @@ footer {
     left: 3rem;
     float:left;
     background: #087aae;
-    padding: 2px;
+    padding: 0.125rem;
     z-index: 3;
     border-radius: 1rem;
     border-bottom:solid #013358 4px;
@@ -159,8 +208,8 @@ footer {
   }
 
   header svg {
-    width: 200px;
-    height: 200px;
+    width: 12.5rem;
+    height: 12.5rem;
     padding-top: 0;
   }
 
@@ -169,8 +218,8 @@ footer {
   }
 
   .magazineEmpty {
-    position: sticky;
-    height: 128px;
+    position: absolute;
+    height: 8rem;
     font-size: 2.5vmax;
     background-position: center;
     background-size: cover;
@@ -180,9 +229,8 @@ footer {
   }
 
   .magazine {
-    position: sticky;
-    height: 128px;
-    font-size: 2.5vmax;
+    position: absolute;
+    height: 8rem;
     background-position: center;
     padding-top: 3rem;
     border-bottom: none;
@@ -190,6 +238,7 @@ footer {
   }
 
   .magazine h1 {
+    font-size: 5vmax;
     display: block;
     float: left;
     margin-top: 1.2rem;
@@ -204,7 +253,7 @@ footer {
   .topNav {
     position: fixed;
     margin-left: auto;
-    width: 250px;
+    width: 15.63rem;
     height: 100vh;
     margin-top: 15rem;
     margin-bottom: 1rem;
@@ -225,26 +274,12 @@ footer {
 
   .content {
     display: flex;
-    flex-flow: column;
+    flex-flow: column nowrap;
     padding-top: 15rem;
   }
 
-  /*.content:before {
-    display: block;
-    content: " ";
-    margin-top: -15rem;
-    height: 15rem;
-    visibility: hidden;
-  }*/
-
   article {
     margin: 0 1rem 0 19.5rem;
-  }
-
-  article:before {
-    /*margin-top: -15rem;
-    height: 15rem;*/
-    display: none;
   }
 
   h2 {
@@ -261,6 +296,10 @@ footer {
     float: right;
   }
 
+  footer {
+    margin-bottom: 0rem;
+  }
+
   #article1 img {content: url("../img/whiterobot1_med.jpg");}
   #article2 img {content: url("../img/boxrobot_med.jpg");}
   #article3 img {content: url("../img/monkeybot_med.jpg");}
@@ -273,6 +312,14 @@ footer {
   #article10 img {content: url("../img/robotndog_med.jpg");}
 
   article a {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .hamburger svg {
     display: none;
   }
 
