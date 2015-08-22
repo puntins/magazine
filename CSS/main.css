@@ -42,6 +42,7 @@ body {
   display: block;
   position: relative;
   left: 0;
+  background: #fff;
   -webkit-transition: all .7s;
   -moz-transition: all .7s;
   -ms-transition: all .7s;
@@ -62,11 +63,12 @@ header svg {
 
 .topNav {
   position: fixed;
-  height: 100vh;
+  height: 30rem;
   width: 12rem;
   text-align: left;
   white-space: nowrap;
   margin-right: auto;
+  margin-top: -6.25rem;
   font-weight: bold;
   padding: 0.625rem;
   background-image: url("../img/electronic_header.jpg");
@@ -85,7 +87,6 @@ header svg {
 
 .topNav ul {
   margin: 0rem;
-  /*margin: 0 2rem;*/
   padding: 0;
 }
 
@@ -93,7 +94,6 @@ header svg {
   display: block;
   font-size: 1.25rem;
   letter-spacing: 0.0700em;
-  /* left changed from 1 */
   padding: .2rem 1rem .2rem 0rem;
 }
 
@@ -168,6 +168,7 @@ footer {
   color: #013358;
   text-align: center;
   padding: .1rem;
+  padding-bottom: 1rem;
   margin-top: 1rem;
   margin-bottom: 3.53rem;
 }
@@ -220,6 +221,8 @@ footer {
 
   .svgLogo .bodyFill {
     fill: #a1adb9;
+    background: none;
+
   }
 
   .magazineEmpty {
@@ -269,12 +272,17 @@ footer {
     border-right:solid #013358 4px;
     border-top:solid #2fbbdd 4px;
     border-left:solid #2fbbdd 4px;
+    z-index: 1;
   }
 
   .topNav ul {
     margin: 1rem 1rem;
     height: 12rem;
     overflow-y: auto;
+  }
+
+  .topNav li {
+    padding: .2rem 1rem .2rem 1rem;
   }
 
   .content {
