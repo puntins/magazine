@@ -39,32 +39,38 @@ body {
 }
 
 .svgLogo {
-  display: flex;
-  justify-content: center;
-}
-
-header svg {
-  width: 6.25rem;
-  height: 6.25rem;
-  padding-top: 5rem;
+  display: block;
+  position: relative;
+  left: 0;
+  -webkit-transition: all .7s;
+  -moz-transition: all .7s;
+  -ms-transition: all .7s;
+  -o-transition: all .7s;
+  transition: all .7s;
   z-index: 1;
 }
 
+.svgLogo.off{
+  left: 14rem;
+}
+
+header svg {
+  width: 100vw;
+  height: 6.25rem;
+  padding-top: 5rem;
+}
+
 .topNav {
-  /* here is the hamburger code */
   position: fixed;
+  height: 100vh;
   width: 12rem;
   text-align: left;
   white-space: nowrap;
   margin-right: auto;
-  /* the hamburger code ends */
-
-  /*text-align: center;*/
   font-weight: bold;
   padding: 0.625rem;
   background-image: url("../img/electronic_header.jpg");
   background-size: cover;
-  /*background-position: center;*/
   border-top: solid #2fbbdd 0.25rem;
   border-bottom: solid #013358 0.25rem;
   border-right: solid #013358 0.25rem;
@@ -72,6 +78,7 @@ header svg {
 }
 
 .topNav a {
+  color: #fff;
   text-decoration: none;
   text-shadow: 0.125rem 0.125rem 0rem #013358;
 }
@@ -90,10 +97,6 @@ header svg {
   padding: .2rem 1rem .2rem 0rem;
 }
 
-.topNav a {
-  color: #fff;
-}
-
 .topNav a:hover {
   color: #ea6af5;
 }
@@ -102,11 +105,11 @@ header svg {
   position: relative;
   background: #fff;
   left: 0;
-  -webkit-transition: all .7s ease;
-  -moz-transition: all .7s ease;
-  -ms-transition: all .7s ease;
-  -o-transition: all .7s ease;
-  transition: all .7s ease;
+  -webkit-transition: all .7s;
+  -moz-transition: all .7s;
+  -ms-transition: all .7s;
+  -o-transition: all .7s;
+  transition: all .7s;
 }
 
 .content.off {
@@ -162,15 +165,11 @@ article a:hover {
 }
 
 footer {
-  color: #fff;
+  color: #013358;
   text-align: center;
-  background: #087aae;
-  border-top: solid #2fbbdd 0.25rem;
-  border-bottom:solid #013358 0.25rem;
   padding: .1rem;
   margin-top: 1rem;
   margin-bottom: 3.53rem;
-  text-shadow: 0.1em 0.1em 0em #013358;
 }
 
 .hamburger {
@@ -197,7 +196,9 @@ footer {
 @media screen and (min-width: 700px) {
 
   .svgLogo {
+    display: flex;
     position: fixed;
+    margin-left: auto;
     top:1rem;
     left: 3rem;
     float:left;
@@ -301,7 +302,13 @@ footer {
   }
 
   footer {
+    color: #fff;
+    text-align: center;
+    background: #087aae;
+    border-top: solid #2fbbdd 0.25rem;
+    border-bottom:solid #013358 0.25rem;
     margin-bottom: 0rem;
+    text-shadow: 0.1em 0.1em 0em #013358;
   }
 
   #article1 img {content: url("../img/whiterobot1_med.jpg");}
